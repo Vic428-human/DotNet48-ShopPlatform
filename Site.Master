@@ -4,11 +4,12 @@
 
 <html lang="zh">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - 我的 ASP.NET 應用程式</title>
-
+    
+   
+    <title><%: Page.Title %> - 電商網站</title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -63,8 +64,26 @@
             </footer>
         </div>
     </form>
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder>
+  
+    <div class="container mt-5">
+        <div class="alert alert-success" role="alert">
+            ✅ Bootstrap 載入成功！這是綠色提示框。
+        </div>
+        
+        <button class="btn btn-primary">藍色按鈕</button>
+        <button class="btn btn-danger">紅色按鈕</button>
+        
+        <div class="row mt-3">
+            <div class="col-md-4 bg-light border p-3">
+                col-md-4
+            </div>
+            <div class="col-md-4 bg-secondary text-white p-3">
+                col-md-4
+            </div>
+            <div class="col-md-4 bg-light border p-3">
+                col-md-4
+            </div>
+        </div>
+    </div>
 </body>
 </html>

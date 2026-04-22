@@ -50,6 +50,8 @@ MyWebFormsAppPractice
 ├── ViewSwitcher.ascx      # 桌機 / 行動版切換控制項
 └── Web.config             # 應用程式主要組態檔
 
+```
+
 ## 學習重點
 - ASP.NET Web Forms 頁面生命週期
 - Master Page 與內容頁的關係
