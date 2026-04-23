@@ -42,7 +42,7 @@ MyWebFormsAppPractice
 ├── Default.aspx           # 首頁，子頁面 > MasterPageFile="~/Site.master" 就是告訴這個頁面：「請套用 Site.master 這個模板」。
 ├── favicon.ico            # 網站圖示
 ├── Global.asax            # 全域應用程式事件，定義應用程式層級事件，類似React的生命周期事件
-├── packages.config        # NuGet 套件清單
+├── packages.config        # NuGet 套件清單，看到 jQuery 3.7.0 出現在專案裡，是因為這份 packages.config 指定了它。這不是 .NET 4.8 自動附帶的，而是 NuGet 套件管理的結果
 ├── Readme.md              # 專案說明文件
 ├── Readme.txt             # 純文字說明文件
 ├── Site.Master            # 主要 Master Page 就像是網站的「共用模板」。只要把選單、頁首、頁尾寫在 Master Page 一次，其他頁面（如 Default.aspx、About.aspx）就會自動套用這個版型。
@@ -58,3 +58,4 @@ MyWebFormsAppPractice
 - Web.config 組態概念
 - 傳統 .NET Framework Web 專案結構
 - 前端資源與後端頁面整合方式
+- 中期 (.NET 4.5.1 ~ 4.6, VS2013/2015)，Visual Studio WebForms 範本開始在 Scripts 資料夾內自動加入 jQuery 1.9/2.x，NuGet 套件管理成為預設，建立專案時就會生成 packages.config。
