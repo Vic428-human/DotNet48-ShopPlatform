@@ -4,17 +4,17 @@
 
 <html lang="zh">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-   
+
+
     <title><%: Page.Title %> - 電商網站</title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -41,21 +41,33 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="<%= ResolveUrl("~/") %>"> 
-                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/icons/safeIcons.png" CssClass="d-inline-block align-top" AlternateText="Logo" Style="height:30px;" />
+                <a class="navbar-brand" href="<%= ResolveUrl("~/") %>">
+                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/icons/safeIcons.png" CssClass="d-inline-block align-top" AlternateText="Logo" Style="height: 30px;" />
                     我的電商平台 
                 </a>
-                 <%-- 漢堡按鈕 --%>
+                <%-- 漢堡按鈕 --%>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="切換導覽" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                 <%-- 導覽列 --%>
+                <%-- 導覽列
+                     
+                --%>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item "><a class="nav-link active" runat="server" href="~/">首頁!!</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">關於</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">連絡人</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <li><a class="dropdown-item" href="#">Shirts</a></li>
+                                <li><a class="dropdown-item" href="#">Pants</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -69,15 +81,15 @@
             </footer>
         </div>
     </form>
-  
+
     <div class="container mt-5">
         <div class="alert alert-success" role="alert">
             ✅ Bootstrap 載入成功！這是綠色提示框。
         </div>
-        
+
         <button class="btn btn-primary">藍色按鈕</button>
         <button class="btn btn-danger">紅色按鈕</button>
-        
+
         <div class="row mt-3">
             <div class="col-md-4 bg-light border p-3">
                 col-md-4
@@ -90,5 +102,9 @@
             </div>
         </div>
     </div>
+    <%--  <script src="~/Scripts/bootstrap.bundle.min.js"></script> --%>
+   <%--   <script src="/Scripts/bootstrap.bundle.min.js"></script> --%>
+   <script src="<%= ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
+
 </body>
 </html>
