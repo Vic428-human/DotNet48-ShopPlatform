@@ -41,7 +41,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">公司LOGO</a>
+                <a class="navbar-brand" href="<%= ResolveUrl("~/") %>"> <asp:Image ID="imgLogo" runat="server" ImageUrl="~/icons/safeIcons.png" CssClass="d-inline-block align-top" AlternateText="Logo" Style="height:40px;" /> </a>
                  <%-- 漢堡按鈕 --%>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="切換導覽" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
