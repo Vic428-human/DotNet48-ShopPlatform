@@ -39,6 +39,8 @@ MyWebFormsAppPractice
 ├── About.aspx             # About 頁面
 ├── Bundle.config          # Bundle / Minification 設定
 ├── Contact.aspx           # Contact 頁面
+├──├── site.css         # 你自己的自訂樣式檔 (新增)
+
 ├── Default.aspx           # 首頁，子頁面 > MasterPageFile="~/Site.master" 就是告訴這個頁面：「請套用 Site.master 這個模板」。
 ├── favicon.ico            # 網站圖示
 ├── Global.asax            # 全域應用程式事件，定義應用程式層級事件，類似React的生命周期事件
