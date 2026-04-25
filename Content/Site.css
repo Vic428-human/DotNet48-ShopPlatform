@@ -17,6 +17,32 @@ textarea {
     max-width: 280px;
 }
 
+.card-carousel {
+    /*border: 5px solid red;*/ /* 外框紅色邊框 */
+    width: 100%; /* 寬度佔滿容器 */
+}
+
+    .card-carousel .carousel-inner {
+        height: 600px; /* 輪播區塊高度固定 600px */
+    }
+
+    .card-carousel .carousel-item {
+        height: 600px; /* 每個項目高度固定 600px */
+        position: relative; /* 讓子元素可用絕對定位 */
+    }
+
+    .card-carousel .carousel-card-img {
+        position: absolute; /* 絕對定位圖片 */
+        top: 50%; /* 垂直置中 */
+        left: 50%; /* 水平置中 */
+        height: 100%; /* 高度填滿父容器 */
+        width: auto; /* 寬度自動，保持比例 */
+        max-width: 100%; /* 最大寬度不超過容器 */
+        transform: translate(-50%, -50%); /* 位移達到真正置中 */
+        object-fit: contain; /* 保持比例完整顯示圖片 */
+    }
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .body-content {

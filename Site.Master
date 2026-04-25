@@ -50,9 +50,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <%-- 導覽列
-                     
-                --%>
+                <%-- 導覽列 --%>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item "><a class="nav-link active" runat="server" href="~/">首頁!!</a></li>
@@ -63,16 +61,26 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">Products
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <li class="dropdown-header">Men</li>
+                                <hr class="dropdown-divider">
                                 <li><a class="dropdown-item" href="#">Shirts</a></li>
+                                <li><a class="dropdown-item" href="#">Pants</a></li>
+
+                                <li class="dropdown-header">Women</li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" href="#">333</a></li>
                                 <li><a class="dropdown-item" href="#">Pants</a></li>
                             </ul>
                         </li>
-
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Registration</a></li>
                     </ul>
                 </div>
+
             </div>
         </nav>
+
         <div class="container body-content">
+             <%-- asp:ContentPlaceHolder => 本身只是「佔位符」，它不會直接顯示內容。真正的內容要在 子頁面 (例如 Default.aspx) 裡用，例如 Carousel 區域 --%>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
@@ -103,8 +111,8 @@
         </div>
     </div>
     <%--  <script src="~/Scripts/bootstrap.bundle.min.js"></script> --%>
-   <%--   <script src="/Scripts/bootstrap.bundle.min.js"></script> --%>
-   <script src="<%= ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
+    <%--   <script src="/Scripts/bootstrap.bundle.min.js"></script> --%>
+    <script src="<%= ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
 
 </body>
 </html>
